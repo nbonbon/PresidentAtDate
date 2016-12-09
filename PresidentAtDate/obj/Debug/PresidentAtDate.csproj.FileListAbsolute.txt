@@ -1,0 +1,29 @@
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\bin\Debug\PresidentAtDate.exe.config
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\bin\Debug\PresidentAtDate.exe
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\bin\Debug\PresidentAtDate.pdb
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\PresidentAtDate.csproj.ResolveComReference.cache
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\MainWindow.g.cs
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\App.g.cs
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\PresidentAtDate_MarkupCompile.cache
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\PresidentAtDate_MarkupCompile.lref
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\MainWindow.baml
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\PresidentAtDate.g.resources
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\PresidentAtDate.Properties.Resources.resources
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\PresidentAtDate.csproj.GenerateResource.Cache
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\PresidentAtDate.exe
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate - Latest\PresidentAtDate\obj\Debug\PresidentAtDate.pdb
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\bin\Debug\PresidentAtDate.exe.config
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\bin\Debug\PresidentAtDate.exe
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\bin\Debug\PresidentAtDate.pdb
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\PresidentAtDate.csprojResolveAssemblyReference.cache
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\PresidentAtDate.csproj.ResolveComReference.cache
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\App.g.cs
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\PresidentAtDate_MarkupCompile.cache
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\PresidentAtDate_MarkupCompile.lref
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\PresidentAtDate.g.resources
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\PresidentAtDate.Properties.Resources.resources
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\PresidentAtDate.csproj.GenerateResource.Cache
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\PresidentAtDate.exe
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\PresidentAtDate.pdb
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\Views\MainWindow.g.cs
+C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\obj\Debug\Views\MainWindow.baml

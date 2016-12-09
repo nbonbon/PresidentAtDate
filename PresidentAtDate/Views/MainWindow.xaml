@@ -1,0 +1,25 @@
+﻿<Window x:Name="MainWindow1" x:Class="PresidentAtDate.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresidentAtDate"
+        mc:Ignorable="d"
+        Title="Who was the President?" Width="550" Height="350" MinWidth="550" MinHeight="350" Icon="../images/us_flag.jpg">
+    <Grid Background="#FF343434">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Who was the President of the United States of America on:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Foreground="#FFEEEEEE"/>
+        <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="10" SelectedDate="{Binding SelectedDate, UpdateSourceTrigger=PropertyChanged}" />
+        <Image Source="{Binding PresidentImage}" Grid.Column="1" Height="250" Margin="10" Grid.Row="1" Width="150"/>
+        <Border Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Height="250" Width="300" BorderBrush="#FFA8A8A8" BorderThickness="1">
+            <TextBlock Text="{Binding PresidentDescription}"   TextWrapping="Wrap" Background="#FFF1EEEE" Padding="10"  />
+        </Border>
+    </Grid>
+</Window>
