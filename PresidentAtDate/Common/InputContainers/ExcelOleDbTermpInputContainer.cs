@@ -6,7 +6,7 @@ namespace PresidentAtDate.Common.InputContainers
 {
     class ExcelOleDbTermpInputContainer : ITermInputContainer
     {
-        private const string PATH = @"D:\projects\PresidentAtDate\PresidentAtDate\Data\Presidents.xlsx";
+        private const string PATH = @"Data\Presidents.xlsx";
         private const string CONNECTION_STRING = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + PATH + ";Extended Properties=\"Excel 12.0 Xml;HDR=YES\"";
 
         public List<Term> loadTerms()
