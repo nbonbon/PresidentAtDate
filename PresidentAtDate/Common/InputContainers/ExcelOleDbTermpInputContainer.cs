@@ -20,21 +20,26 @@ namespace PresidentAtDate.Common.InputContainers
                 connection.Open();
 
                 OleDbCommand rowCountCommand = new OleDbCommand("SELECT COUNT(*) from [Sheet1$]", connection);
-                //int rowCount = (int) rowCountCommand.ExecuteScalar();
+                int rowCount = (int) rowCountCommand.ExecuteScalar();
 
                 OleDbCommand command = new OleDbCommand("SELECT * FROM [Sheet1$]", connection);
                 using (OleDbDataReader dr = command.ExecuteReader())
                 {
-                    int colCount = dr.FieldCount;
                     while (dr.Read())
                     {
                         presidentBeingParsed = new President();
                         currentPresidentTermList = new List<Term>();
 
-                        for (int j = 0; j < colCount; j++)
+                        int colCount = dr.FieldCount;
+                        if(RowIsEmpty(dr, colCount))
                         {
-                            string currentValue = dr[j].ToString();
-                            switch ((PresidentDataColumn)j)
+                            break;
+                        }
+
+                        for (int i = 0; i < colCount; i++)
+                        {
+                            string currentValue = dr[i].ToString();
+                            switch ((PresidentDataColumn) i)
                             {
                                 case PresidentDataColumn.Name:
                                     if (!string.IsNullOrEmpty(currentValue))
@@ -101,6 +106,19 @@ namespace PresidentAtDate.Common.InputContainers
             }
 
             return termList;
+        }
+
+        private bool RowIsEmpty(OleDbDataReader dr, int numberOfColumns)
+        {
+            bool isEmpty = true;
+            for (int i = 0; i < numberOfColumns; i++)
+            {
+                if (!string.IsNullOrEmpty(dr[i].ToString()))
+                {
+                    return false;
+                }
+            }
+            return isEmpty;
         }
 
         private List<Term> ParseExcelTermStringToTermList(string excelTermString)
