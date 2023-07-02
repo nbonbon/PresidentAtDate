@@ -2,7 +2,7 @@
 {
     public enum PresidentDataColumn
     {
-        Name = 1,
+        Name = 0,
         Terms,
         Born,
         Died,

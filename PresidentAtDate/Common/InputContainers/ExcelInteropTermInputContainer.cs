@@ -5,7 +5,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace PresidentAtDate
 {
-    class ExcelTermInputContainer : ITermInputContainer
+    class ExcelInteropTermInputContainer : ITermInputContainer
     {
         //private const string presidentWorkbookFileName = "pack://application:,,,/Data/Presidents.xls";
         private const string presidentWorkbookFileName = @"C:\Users\1108157\Documents\Visual Studio 2015\Projects\PresidentAtDate\PresidentAtDate\Data\Presidents.xlsx";

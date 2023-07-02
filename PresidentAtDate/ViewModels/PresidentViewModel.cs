@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PresidentAtDate.Common.InputContainers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Media.Imaging;
@@ -208,7 +209,7 @@ namespace PresidentAtDate.ViewModels
         /// </summary>
         private void PopulateTermList()
         {
-            ExcelTermInputContainer inputContainer = new ExcelTermInputContainer();
+            ExcelOleDbTermpInputContainer inputContainer = new ExcelOleDbTermpInputContainer();
             termList = inputContainer.loadTerms();
         }
 
