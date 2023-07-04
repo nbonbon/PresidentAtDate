@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
+using System.Runtime.Versioning;
 
 namespace PresidentAtDate.Common.InputContainers
 {
+    [SupportedOSPlatform("windows")]
     class ExcelOleDbTermpInputContainer : ITermInputContainer
     {
         private const string PATH = @"Data\Presidents.xlsx";

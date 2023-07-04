@@ -2,15 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.Versioning;
 using System.Windows.Media.Imaging;
 
 namespace PresidentAtDate.ViewModels
 {
+    [SupportedOSPlatform("windows")]
     class PresidentViewModel : INotifyPropertyChanged
     {
         private List<Term> termList = new List<Term>();
-        
-        private string presidentDescription { get; set; }
+
+        private string presidentDescription = string.Empty;
+
         public string PresidentDescription
         {
             get
@@ -20,11 +23,11 @@ namespace PresidentAtDate.ViewModels
             set
             {
                 presidentDescription = value;
-                OnPropertyChanged("PresidentDescription");
+                OnPropertyChanged(nameof(PresidentDescription));
             }
         }
 
-        private BitmapImage presidentImage { get; set; }
+        private BitmapImage presidentImage = null;
         public BitmapImage PresidentImage
         {
             get
@@ -34,7 +37,7 @@ namespace PresidentAtDate.ViewModels
             set
             {
                 presidentImage = value;
-                OnPropertyChanged("PresidentImage");
+                OnPropertyChanged(nameof(PresidentImage));
             }
         }
 
@@ -48,8 +51,8 @@ namespace PresidentAtDate.ViewModels
             set
             {
                 selectedDate = value;
-                getApplicablePresident();
-                OnPropertyChanged("SelectedDate");
+                GetApplicablePresident();
+                OnPropertyChanged(nameof(SelectedDate));
             }
         }
 
@@ -62,7 +65,7 @@ namespace PresidentAtDate.ViewModels
             CalculatePresidentialNumbers();
 
             // Default the president selection the current president
-            updateDisplayedPresident(findCurrentPresident());
+            UpdateDisplayedPresident(FindCurrentPresident());
             
         }
 
@@ -71,7 +74,7 @@ namespace PresidentAtDate.ViewModels
         /// have a term will a null end date.
         /// </summary>
         /// <returns>The current President of the USA</returns>
-        private President findCurrentPresident()
+        private President FindCurrentPresident()
         {
             President result = null;
             foreach (Term t in termList)
@@ -89,7 +92,7 @@ namespace PresidentAtDate.ViewModels
         /// inauagral date for one president and the last day in office for the other the President
         /// that it will find will be the president that was inaugarated on the selected date.
         /// </summary>
-        private void getApplicablePresident()
+        private void GetApplicablePresident()
         {
             DateTime now = DateTime.Now;
             DateTime initial = new DateTime(1789, 4, 30);
@@ -97,12 +100,12 @@ namespace PresidentAtDate.ViewModels
             if (selectedDate > now)
             {
                 PresidentDescription = "Selected date cannot be in the future.";
-                PresidentImage = new BitmapImage(determineUri(null));
+                PresidentImage = new BitmapImage(DetermineUri(null));
             }
             else if (selectedDate < initial)
             {
                 PresidentDescription = "There was no President of the United States of America prior to " + initial.ToShortDateString() + ".";
-                PresidentImage = new BitmapImage(determineUri(null));
+                PresidentImage = new BitmapImage(DetermineUri(null));
             }
             else
             {
@@ -110,7 +113,7 @@ namespace PresidentAtDate.ViewModels
                 {
                     if (selectedDate.HasValue && t.isInRange(selectedDate.Value))
                     {
-                        updateDisplayedPresident(t.termPresident); ;
+                        UpdateDisplayedPresident(t.termPresident); ;
                     }
                 }
             }
@@ -120,7 +123,7 @@ namespace PresidentAtDate.ViewModels
         /// Create the President description to be displayed and determine the applicable Presidents image.
         /// </summary>
         /// <param name="p">The President to display</param>
-        private void updateDisplayedPresident(President p)
+        private void UpdateDisplayedPresident(President p)
         {
             // If the date selected was this presidents inaugral day mention that
 
@@ -129,10 +132,10 @@ namespace PresidentAtDate.ViewModels
             PresidentDescription += "Born: " + p.birthDate.ToShortDateString() + Environment.NewLine;
             PresidentDescription += "Died: " + (p.deathDate == null ? "Still living" : p.deathDate.Value.ToShortDateString()) + Environment.NewLine;
             PresidentDescription += "Party: " + EnumUtil.GetEnumDescription(p.politicalAffiliation) + Environment.NewLine;
-            PresidentDescription += "Presidential Number: " + displayPresidentalNumbers(p) + Environment.NewLine;
+            PresidentDescription += "Presidential Number: " + DisplayPresidentalNumbers(p) + Environment.NewLine;
 
             // Update image
-            PresidentImage = new BitmapImage(determineUri(p));
+            PresidentImage = new BitmapImage(DetermineUri(p));
         }
 
         /// <summary>
@@ -140,18 +143,18 @@ namespace PresidentAtDate.ViewModels
         /// </summary>
         /// <param name="p">President to determine the term numbers</param>
         /// <returns>String that respresents the presidents term  number(s)</returns>
-        private string displayPresidentalNumbers(President p)
+        private string DisplayPresidentalNumbers(President p)
         {
             string result = "";
             foreach (int num in p.presidentNumbers)
             {
                 if (result == "")
                 {
-                    result = getOrdinalStringFromInt(num);
+                    result = GetOrdinalStringFromInt(num);
                 }
                 else
                 {
-                    result += " and " + getOrdinalStringFromInt(num);
+                    result += " and " + GetOrdinalStringFromInt(num);
                 }
             }
             return result;
@@ -162,7 +165,7 @@ namespace PresidentAtDate.ViewModels
         /// </summary>
         /// <param name="num">Number to determne ordinal string representation</param>
         /// <returns>Ordinal string representation of the integer passed in</returns>
-        private string getOrdinalStringFromInt(int num)
+        private string GetOrdinalStringFromInt(int num)
         {
             switch (num % 100)
             {
@@ -190,9 +193,9 @@ namespace PresidentAtDate.ViewModels
         /// </summary>
         /// <param name="p">President to find the image Uri of</param>
         /// <returns>The Uri of the President p</returns>
-        private Uri determineUri(President p)
+        private Uri DetermineUri(President p)
         {
-            Uri uri = null;
+            Uri uri;
             if (p == null)
             {
                 uri = new Uri("pack://application:,,,/Images/us_flag.jpg");

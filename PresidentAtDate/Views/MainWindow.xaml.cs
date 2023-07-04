@@ -1,4 +1,5 @@
 ﻿using PresidentAtDate.ViewModels;
+using System.Runtime.Versioning;
 using System.Windows;
 
 namespace PresidentAtDate.Views
@@ -6,6 +7,7 @@ namespace PresidentAtDate.Views
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    [SupportedOSPlatform("windows")]
     public partial class MainWindow : Window
     {
         
