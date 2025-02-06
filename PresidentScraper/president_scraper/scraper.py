@@ -69,35 +69,15 @@ class Scraper:
             current_term.number = self.parse_number(current_cell)
             current_cell = current_cell.find_next_sibling()
 
-            # portrait
-            img_tag = current_cell.find('img')
-            if img_tag:
-                src = img_tag.get('src')
-                current_portrait.online_uri = src
-            else:
-                print("No <img> tag found in the current cell.")
+            current_portrait.online_uri = self.parse_portrait(current_cell)
             current_cell = current_cell.find_next_sibling()
 
             current_president.name = self.parse_name(current_cell)
-            current_cell = current_cell.find_next_sibling()
             
-            # #birth and death dates
-            # date_span = current_cell.find('span')
-            # if date_span:
-            #     date_span_string = date_span.get_text()
-            #     match = re.search(r"\((\d{4})[–-](\d{4})\)", date_span_string)
-
-            #     if match:
-            #         # Extract the years using capture groups
-            #         year1 = match.group(1)
-            #         year2 = match.group(2)
-            #     else:
-            #         print("No date span matches found.")
-            #     current_president.name = name
-            # else:
-            #     print("No <span> tag found in the current cell.")
-
-            # current_cell = current_cell.find_next_sibling()
+            birth_date, death_date = self.parse_dates(current_cell)
+            current_president.birth_date = birth_date
+            current_president.death_date = death_date
+            current_cell = current_cell.find_next_sibling()
 
             current_term.portrait = current_portrait
             current_term.president = current_president
@@ -113,8 +93,16 @@ class Scraper:
         return re.sub(r'\[.*\]', '', str)
     
     def parse_number(self, cell):
-        return self.remove_reference(cell.get_text())
+        return self.remove_reference(cell.get_text().strip())
     
+    def parse_portrait(self, cell):
+        img_tag = cell.find('img')
+        if img_tag:
+            src = img_tag.get('src')
+            return src.strip()
+        else:
+            print("No <img> tag found in the current cell.")
+
     def parse_name(self, cell):
         name_a = cell.find('a')
         if name_a:
@@ -122,3 +110,21 @@ class Scraper:
             return name.strip()
         else:
             print("No <a> tag found in the current cell.")
+
+    def parse_dates(self, cell):
+        date_span = cell.find('span')
+        print(date_span)
+        if date_span:
+            date_span_string = date_span.get_text()
+            match_with_two_dates = re.search(r"\((\d{4})[–-](\d{4})\)", date_span_string)
+            match_with_one_date = re.search(r"\(b. (\d{4})\)", date_span_string)
+
+            if match_with_two_dates:
+                # Extract the years using capture groups
+                return match_with_two_dates.group(1), match_with_two_dates.group(2)
+            elif match_with_one_date:
+                return match_with_one_date.group(1), None
+            else:
+                print("No date span matches found.")
+        else:
+            print("No <span> tag found in the current cell.")
