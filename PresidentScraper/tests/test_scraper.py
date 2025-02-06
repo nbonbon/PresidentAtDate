@@ -14,10 +14,25 @@ class ScraperTest(unittest.TestCase):
         self.mockRequester = Mock()
         self.mockRequester.wikipedia_president_request.return_value = requestReturn
 
-    def test_scrape(self):
+    def test_scrapeShouldParseTheCorrectNumberOfPresidents(self):
         scraper = Scraper(self.mockRequester)
         result = scraper.scrape()
         self.assertEqual(len(result), 1)
+
+    def test_scrapeShouldParseTheTermNumber(self):
+        scraper = Scraper(self.mockRequester)
+        result = scraper.scrape()
+        self.assertEqual(result[0].number, 1)
+
+    def test_scrapeShouldParseThePortraitUri(self):
+        scraper = Scraper(self.mockRequester)
+        result = scraper.scrape()
+        self.assertEqual(result[0].portrait.online_uri, "//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington_%28cropped%29%282%29.jpg/110px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington_%28cropped%29%282%29.jpg")
+
+    def test_scrapeShouldParseTheTermPresidentName(self):
+        scraper = Scraper(self.mockRequester)
+        result = scraper.scrape()
+        self.assertEqual(result[0].president.name, "George Washington")
 
 if __name__ == '__main__':
     unittest.main()
