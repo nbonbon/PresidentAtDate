@@ -66,7 +66,6 @@ class Scraper:
             current_portrait = Portrait()
             current_president = President.create_default()
 
-            # number
             current_term.number = self.parse_number(current_cell)
             current_cell = current_cell.find_next_sibling()
 
@@ -79,13 +78,8 @@ class Scraper:
                 print("No <img> tag found in the current cell.")
             current_cell = current_cell.find_next_sibling()
 
-            # Name
-            name_a = current_cell.find('a')
-            if name_a:
-                name = name_a.get('title')
-                current_president.name = name
-            else:
-                print("No <a> tag found in the current cell.")
+            current_president.name = self.parse_name(current_cell)
+            current_cell = current_cell.find_next_sibling()
             
             # #birth and death dates
             # date_span = current_cell.find('span')
@@ -120,3 +114,11 @@ class Scraper:
     
     def parse_number(self, cell):
         return self.remove_reference(cell.get_text())
+    
+    def parse_name(self, cell):
+        name_a = cell.find('a')
+        if name_a:
+            name = name_a.get('title')
+            return name.strip()
+        else:
+            print("No <a> tag found in the current cell.")
