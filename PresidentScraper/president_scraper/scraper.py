@@ -117,7 +117,7 @@ class Scraper:
         if date_span:
             date_span_string = date_span.get_text()
             match_with_two_dates = re.search(r"\((\d{4})[–-](\d{4})\)", date_span_string)
-            match_with_one_date = re.search(r"\(b. (\d{4})\)", date_span_string)
+            match_with_one_date = re.search(r"\(b\..*(\d{4})\)", date_span_string)
 
             if match_with_two_dates:
                 # Extract the years using capture groups

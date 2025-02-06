@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import Mock
 import requests
+from bs4 import BeautifulSoup
 
 from president_scraper.scraper import Scraper
 
@@ -33,6 +34,26 @@ class ScraperTest(unittest.TestCase):
         scraper = Scraper(self.mockRequester)
         result = scraper.scrape()
         self.assertEqual(result[0].president.name, "George Washington")
+
+    def test_parse_dates_shouldParseBirthAndDeathDates(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td data-sort-value="Washington, George"><b><a href="/wiki/George_Washington" title="George Washington">George Washington</a></b><br><span style="font-size:85%">(1732–1799)</span><br><sup id="cite_ref-FOOTNOTEMcDonald2000_21-0" class="reference"><a href="#cite_note-FOOTNOTEMcDonald2000-21"><span class="cite-bracket">&#91;</span>19<span class="cite-bracket">&#93;</span></a></sup></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result1, result2 = scraper.parse_dates(soup)
+
+        self.assertEqual(result1, "1732")
+        self.assertEqual(result2, "1799")
+
+    def test_parse_dates_shouldParseBirthDateFormat(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td data-sort-value="Obama, Barack"><b><a href="/wiki/Barack_Obama" title="Barack Obama">Barack Obama</a></b><br><span style="font-size:85%">(<abbr title="born in">b.</abbr>1961)</span><br><sup id="cite_ref-FOOTNOTEwhitehouse.gov_(e)_96-0" class="reference"><a href="#cite_note-FOOTNOTEwhitehouse.gov_(e)-96"><span class="cite-bracket">&#91;</span>75<span class="cite-bracket">&#93;</span></a></sup></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result1, result2 = scraper.parse_dates(soup)
+
+        self.assertEqual(result1, "1961")
+        self.assertEqual(result2, None)
 
 if __name__ == '__main__':
     unittest.main()
