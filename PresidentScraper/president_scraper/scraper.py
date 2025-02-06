@@ -49,33 +49,74 @@ class Scraper:
                     print("Current header text was empty. Skipping...")
                     return None
 
-                col_header_string = self.normalize(col_header_string)
+                col_header_string = self.remove_reference(col_header_string)
                 col_header_strings.append(col_header_string)
 
             terms = []
-            currentCell = presidentsTable.find("th", scope="row") # first president
+            current_cell = presidentsTable.find('th', scope='row') # first president
 
             if len(col_headers) == 0:
                 print("Did not find a <th scope='row'> element. Could not parse.")
                 return None
 
-            currentRow = currentCell.find_parent()
+            current_row = current_cell.find_parent()
             
-            # todo: Loop ... until next sibling empty? Then hop a row?
-            currentTerm = Term.create_default()
-            currentTerm.number = self.normalize(currentCell.get_text())
-            currentCell = currentCell.find_next_sibling()
-            
-            portrait = Portrait()
-            portrait.online_uri = currentCell.find('a').find('img').get('src')
-            currentTerm.portrait = portrait
+            # loop through currentRow / President cells
+            current_term = Term.create_default()
+            current_portrait = Portrait()
+            current_president = President.create_default()
 
-            terms.append(currentTerm)
+            # number
+            current_term.number = self.parse_number(current_cell)
+            current_cell = current_cell.find_next_sibling()
+
+            # portrait
+            img_tag = current_cell.find('img')
+            if img_tag:
+                src = img_tag.get('src')
+                current_portrait.online_uri = src
+            else:
+                print("No <img> tag found in the current cell.")
+            current_cell = current_cell.find_next_sibling()
+
+            # Name
+            name_a = current_cell.find('a')
+            if name_a:
+                name = name_a.get('title')
+                current_president.name = name
+            else:
+                print("No <a> tag found in the current cell.")
+            
+            # #birth and death dates
+            # date_span = current_cell.find('span')
+            # if date_span:
+            #     date_span_string = date_span.get_text()
+            #     match = re.search(r"\((\d{4})[–-](\d{4})\)", date_span_string)
+
+            #     if match:
+            #         # Extract the years using capture groups
+            #         year1 = match.group(1)
+            #         year2 = match.group(2)
+            #     else:
+            #         print("No date span matches found.")
+            #     current_president.name = name
+            # else:
+            #     print("No <span> tag found in the current cell.")
+
+            # current_cell = current_cell.find_next_sibling()
+
+            current_term.portrait = current_portrait
+            current_term.president = current_president
+            
+            terms.append(current_term)
 
             return terms
         else:
             print("Could not find presidents table.")
             return None
 
-    def normalize(self, str):
+    def remove_reference(self, str):
         return re.sub(r'\[.*\]', '', str)
+    
+    def parse_number(self, cell):
+        return self.remove_reference(cell.get_text())
