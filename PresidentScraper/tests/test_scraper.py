@@ -40,20 +40,30 @@ class ScraperTest(unittest.TestCase):
         content = """<td data-sort-value="Washington, George"><b><a href="/wiki/George_Washington" title="George Washington">George Washington</a></b><br><span style="font-size:85%">(1732–1799)</span><br><sup id="cite_ref-FOOTNOTEMcDonald2000_21-0" class="reference"><a href="#cite_note-FOOTNOTEMcDonald2000-21"><span class="cite-bracket">&#91;</span>19<span class="cite-bracket">&#93;</span></a></sup></td>"""
         soup = BeautifulSoup(content, "html.parser")
 
-        result1, result2 = scraper.parse_dates(soup)
+        result1, result2 = scraper.parse_life_dates(soup)
 
         self.assertEqual(result1, "1732")
         self.assertEqual(result2, "1799")
 
-    def test_parse_dates_shouldParseBirthDateFormat(self):
+    def test_parse_life_dates_shouldParseBirthDateFormat(self):
         scraper = Scraper(self.mockRequester)
         content = """<td data-sort-value="Obama, Barack"><b><a href="/wiki/Barack_Obama" title="Barack Obama">Barack Obama</a></b><br><span style="font-size:85%">(<abbr title="born in">b.</abbr>1961)</span><br><sup id="cite_ref-FOOTNOTEwhitehouse.gov_(e)_96-0" class="reference"><a href="#cite_note-FOOTNOTEwhitehouse.gov_(e)-96"><span class="cite-bracket">&#91;</span>75<span class="cite-bracket">&#93;</span></a></sup></td>"""
         soup = BeautifulSoup(content, "html.parser")
 
-        result1, result2 = scraper.parse_dates(soup)
+        result1, result2 = scraper.parse_life_dates(soup)
 
         self.assertEqual(result1, "1961")
         self.assertEqual(result2, None)
+
+    def test_parse_dates_shouldParseTermStartAndEndDates(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td><span data-sort-value="000000001789-04-30-0000" style="white-space:nowrap">April 30, 1789</span><br>–<br><span data-sort-value="000000001797-03-04-0000" style="white-space:nowrap">March 4, 1797</span></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result1, result2 = scraper.parse_term_dates(soup)
+
+        self.assertEqual(result1, "April 30, 1789")
+        self.assertEqual(result2, "March 4, 1797")
 
 if __name__ == '__main__':
     unittest.main()

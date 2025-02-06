@@ -74,9 +74,14 @@ class Scraper:
 
             current_president.name = self.parse_name(current_cell)
             
-            birth_date, death_date = self.parse_dates(current_cell)
+            birth_date, death_date = self.parse_life_dates(current_cell)
             current_president.birth_date = birth_date
             current_president.death_date = death_date
+            current_cell = current_cell.find_next_sibling()
+
+            start_date, end_date = self.parse_term_dates(current_cell)
+            current_term.start_date = start_date
+            current_term.end_date = end_date
             current_cell = current_cell.find_next_sibling()
 
             current_term.portrait = current_portrait
@@ -111,9 +116,8 @@ class Scraper:
         else:
             print("No <a> tag found in the current cell.")
 
-    def parse_dates(self, cell):
+    def parse_life_dates(self, cell):
         date_span = cell.find('span')
-        print(date_span)
         if date_span:
             date_span_string = date_span.get_text()
             match_with_two_dates = re.search(r"\((\d{4})[–-](\d{4})\)", date_span_string)
@@ -128,3 +132,19 @@ class Scraper:
                 print("No date span matches found.")
         else:
             print("No <span> tag found in the current cell.")
+
+    def parse_term_dates(self, cell):
+        start_span = cell.find('span')
+        end_span = start_span.find_next_sibling('span')
+
+        if start_span:
+            start_date = start_span.get_text().strip()
+        else:
+            print("No term start <span> tag found in the current cell.")
+
+        if end_span:
+            end_date = end_span.get_text().strip()
+        else:
+            print("No term end <span> tag found in the current cell.")
+
+        return start_date, end_date
