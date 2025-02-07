@@ -61,45 +61,50 @@ class Scraper:
 
             current_row = current_cell.find_parent()
             
-            # loop through currentRow / President cells
-            current_term = Term.create_default()
-            current_portrait = Portrait()
-            current_president = President.create_default()
+            while current_row:
+                if not current_cell:
+                    current_cell = current_row.find(['th']) # first cell is a <th> for number
 
-            current_term.number = self.parse_number(current_cell)
-            current_cell = current_cell.find_next_sibling()
+                current_term = Term.create_default()
+                current_portrait = Portrait()
+                current_president = President.create_default()
 
-            current_portrait.online_uri = self.parse_portrait(current_cell)
-            current_cell = current_cell.find_next_sibling()
+                current_term.number = self.parse_number(current_cell)
+                current_cell = current_cell.find_next_sibling()
 
-            current_president.name = self.parse_name(current_cell)
-            
-            birth_date, death_date = self.parse_life_dates(current_cell)
-            current_president.birth_date = birth_date
-            current_president.death_date = death_date
-            current_cell = current_cell.find_next_sibling()
+                current_portrait.online_uri = self.parse_portrait(current_cell)
+                current_cell = current_cell.find_next_sibling()
 
-            start_date, end_date = self.parse_term_dates(current_cell)
-            current_term.start_date = start_date
-            current_term.end_date = end_date
-            current_cell = current_cell.find_next_sibling()
+                current_president.name = self.parse_name(current_cell)
+                
+                birth_date, death_date = self.parse_life_dates(current_cell)
+                current_president.birth_date = birth_date
+                current_president.death_date = death_date
+                current_cell = current_cell.find_next_sibling()
 
-            # skip party color
-            current_cell = current_cell.find_next_sibling()
+                start_date, end_date = self.parse_term_dates(current_cell)
+                current_term.start_date = start_date
+                current_term.end_date = end_date
+                current_cell = current_cell.find_next_sibling()
 
-            current_term.political_affiliations = self.parse_political_affiliations(current_cell)
-            current_cell = current_cell.find_next_sibling()
+                # skip party color
+                current_cell = current_cell.find_next_sibling()
 
-            current_term.election_years = self.parse_election_years(current_cell)
-            current_cell = current_cell.find_next_sibling()
+                current_term.political_affiliations = self.parse_political_affiliations(current_cell)
+                current_cell = current_cell.find_next_sibling()
 
-            current_term.vice_presidents = self.parse_vice_presidents(current_cell)
-            current_cell = current_cell.find_next_sibling() # should return None
+                current_term.election_years = self.parse_election_years(current_cell)
+                current_cell = current_cell.find_next_sibling()
 
-            current_term.portrait = current_portrait
-            current_term.president = current_president
-            
-            terms.append(current_term)
+                current_term.vice_presidents = self.parse_vice_presidents(current_cell)
+
+                current_term.portrait = current_portrait
+                current_term.president = current_president
+                
+                terms.append(current_term)
+                
+                current_row = current_row.find_next('tr')
+                current_cell = None
 
             return terms
         else:
