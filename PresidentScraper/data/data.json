@@ -1,0 +1,1104 @@
+[
+    {
+        "number": 1,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington_%28cropped%29%282%29.jpg/110px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington_%28cropped%29%282%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "April 30, 1789",
+        "end_date": "March 4, 1797",
+        "political_affiliations": [
+            "Unaffiliated"
+        ],
+        "president": {
+            "name": "George Washington",
+            "birth_date": "1732",
+            "death_date": "1799"
+        },
+        "vice_presidents": [
+            "John Adams"
+        ],
+        "election_years": [
+            "1788\u201389",
+            "1792"
+        ]
+    },
+    {
+        "number": 2,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c8/John_Adams_1800_to_1815_Portrait_%284x5_cropped%29.jpg/110px-John_Adams_1800_to_1815_Portrait_%284x5_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1797",
+        "end_date": "March 4, 1801",
+        "political_affiliations": [
+            "Federalist"
+        ],
+        "president": {
+            "name": "John Adams",
+            "birth_date": "1735",
+            "death_date": "1826"
+        },
+        "vice_presidents": [
+            "Thomas Jefferson"
+        ],
+        "election_years": [
+            "1796"
+        ]
+    },
+    {
+        "number": 3,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Thomas_Jefferson_by_Rembrandt_Peale%2C_1800.jpg/110px-Thomas_Jefferson_by_Rembrandt_Peale%2C_1800.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1801",
+        "end_date": "March 4, 1809",
+        "political_affiliations": [
+            "Democratic-Republican"
+        ],
+        "president": {
+            "name": "Thomas Jefferson",
+            "birth_date": "1743",
+            "death_date": "1826"
+        },
+        "vice_presidents": [
+            "Aaron Burr",
+            "George Clinton"
+        ],
+        "election_years": [
+            "1800",
+            "1804"
+        ]
+    },
+    {
+        "number": 4,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f6/James_Madison_1816.jpg/110px-James_Madison_1816.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1809",
+        "end_date": "March 4, 1817",
+        "political_affiliations": [
+            "Democratic-Republican"
+        ],
+        "president": {
+            "name": "James Madison",
+            "birth_date": "1751",
+            "death_date": "1836"
+        },
+        "vice_presidents": [
+            "George Clinton",
+            "Elbridge Gerry"
+        ],
+        "election_years": [
+            "1808",
+            "1812"
+        ]
+    },
+    {
+        "number": 5,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/James_Monroe_White_House_portrait_1819_%283x4_cropped%29.jpg/110px-James_Monroe_White_House_portrait_1819_%283x4_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1817",
+        "end_date": "March 4, 1825",
+        "political_affiliations": [
+            "Democratic-Republican"
+        ],
+        "president": {
+            "name": "James Monroe",
+            "birth_date": "1758",
+            "death_date": "1831"
+        },
+        "vice_presidents": [
+            "Daniel D. Tompkins"
+        ],
+        "election_years": [
+            "1816",
+            "1820"
+        ]
+    },
+    {
+        "number": 6,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/8/87/John_Quincy_Adams_1858_crop.jpg/110px-John_Quincy_Adams_1858_crop.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1825",
+        "end_date": "March 4, 1829",
+        "political_affiliations": [
+            "Democratic-Republican",
+            "National Republican"
+        ],
+        "president": {
+            "name": "John Quincy Adams",
+            "birth_date": "1767",
+            "death_date": "1848"
+        },
+        "vice_presidents": [
+            "John C. Calhoun",
+            "[g]"
+        ],
+        "election_years": [
+            "1824"
+        ]
+    },
+    {
+        "number": 7,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Andrew_jackson_head_%28cropped_4x5%29.jpg/110px-Andrew_jackson_head_%28cropped_4x5%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1829",
+        "end_date": "March 4, 1837",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Andrew Jackson",
+            "birth_date": "1767",
+            "death_date": "1845"
+        },
+        "vice_presidents": [
+            "John C. Calhoun",
+            "[h]",
+            "Martin Van Buren"
+        ],
+        "election_years": [
+            "1828",
+            "1832"
+        ]
+    },
+    {
+        "number": 8,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Martin_Van_Buren_circa_1837_crop.jpg/110px-Martin_Van_Buren_circa_1837_crop.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1837",
+        "end_date": "March 4, 1841",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Martin Van Buren",
+            "birth_date": "1782",
+            "death_date": "1862"
+        },
+        "vice_presidents": [
+            "Richard Mentor Johnson"
+        ],
+        "election_years": [
+            "1836"
+        ]
+    },
+    {
+        "number": 9,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/William_Henry_Harrison_crop.jpg/110px-William_Henry_Harrison_crop.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1841",
+        "end_date": "April 4, 1841",
+        "political_affiliations": [
+            "Whig"
+        ],
+        "president": {
+            "name": "William Henry Harrison",
+            "birth_date": "1773",
+            "death_date": "1841"
+        },
+        "vice_presidents": [
+            "John Tyler"
+        ],
+        "election_years": [
+            "1840"
+        ]
+    },
+    {
+        "number": 10,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6e/John_Tyler_%28cropped_3x4%29_%28cropped%29%282%29.png/110px-John_Tyler_%28cropped_3x4%29_%28cropped%29%282%29.png",
+            "local_uri": null
+        },
+        "start_date": "April 4, 1841[i]\u2013March 4, 1845",
+        "end_date": "",
+        "political_affiliations": [
+            "Whig",
+            "[j]",
+            "Unaffiliated"
+        ],
+        "president": {
+            "name": "John Tyler",
+            "birth_date": "1790",
+            "death_date": "1862"
+        },
+        "vice_presidents": [],
+        "election_years": []
+    },
+    {
+        "number": 11,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/8/86/James_K_Polk_%283x4_cropped%29.jpg/110px-James_K_Polk_%283x4_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1845",
+        "end_date": "March 4, 1849",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "James K. Polk",
+            "birth_date": "1795",
+            "death_date": "1849"
+        },
+        "vice_presidents": [
+            "George M. Dallas"
+        ],
+        "election_years": [
+            "1844"
+        ]
+    },
+    {
+        "number": 12,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Zachary_Taylor_restored_%283x4_cropped%29.jpg/110px-Zachary_Taylor_restored_%283x4_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1849",
+        "end_date": "July 9, 1850",
+        "political_affiliations": [
+            "Whig"
+        ],
+        "president": {
+            "name": "Zachary Taylor",
+            "birth_date": "1784",
+            "death_date": "1850"
+        },
+        "vice_presidents": [
+            "Millard Fillmore"
+        ],
+        "election_years": [
+            "1848"
+        ]
+    },
+    {
+        "number": 13,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Fillmore.jpg/110px-Fillmore.jpg",
+            "local_uri": null
+        },
+        "start_date": "July 9, 1850",
+        "end_date": "March 4, 1853",
+        "political_affiliations": [
+            "Whig"
+        ],
+        "president": {
+            "name": "Millard Fillmore",
+            "birth_date": "1800",
+            "death_date": "1874"
+        },
+        "vice_presidents": [],
+        "election_years": []
+    },
+    {
+        "number": 14,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Mathew_Brady_-_Franklin_Pierce_-_alternate_crop_%28cropped%29%282%29.jpg/110px-Mathew_Brady_-_Franklin_Pierce_-_alternate_crop_%28cropped%29%282%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1853",
+        "end_date": "March 4, 1857",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Franklin Pierce",
+            "birth_date": "1804",
+            "death_date": "1869"
+        },
+        "vice_presidents": [
+            "William R. King"
+        ],
+        "election_years": [
+            "1852"
+        ]
+    },
+    {
+        "number": 15,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b5/James_Buchanan_%28cropped_3x4%29.jpg/110px-James_Buchanan_%28cropped_3x4%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1857",
+        "end_date": "March 4, 1861",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "James Buchanan",
+            "birth_date": "1791",
+            "death_date": "1868"
+        },
+        "vice_presidents": [
+            "John C. Breckinridge"
+        ],
+        "election_years": [
+            "1856"
+        ]
+    },
+    {
+        "number": 16,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/110px-Abraham_Lincoln_O-77_matte_collodion_print.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1861",
+        "end_date": "April 15, 1865",
+        "political_affiliations": [
+            "Republican",
+            "National Union",
+            "[l]"
+        ],
+        "president": {
+            "name": "Abraham Lincoln",
+            "birth_date": "1809",
+            "death_date": "1865"
+        },
+        "vice_presidents": [
+            "Hannibal Hamlin",
+            "Andrew Johnson"
+        ],
+        "election_years": [
+            "1860",
+            "1864"
+        ]
+    },
+    {
+        "number": 17,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Andrew_Johnson_photo_portrait_head_and_shoulders_%283x4_cropped%29.jpg/110px-Andrew_Johnson_photo_portrait_head_and_shoulders_%283x4_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "April 15, 1865",
+        "end_date": "March 4, 1869",
+        "political_affiliations": [
+            "National Union",
+            "[n]",
+            "Democratic"
+        ],
+        "president": {
+            "name": "Andrew Johnson",
+            "birth_date": "1808",
+            "death_date": "1875"
+        },
+        "vice_presidents": [],
+        "election_years": []
+    },
+    {
+        "number": 18,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Ulysses_S_Grant_by_Brady_c1870-restored_%283x4_crop%29.jpg/110px-Ulysses_S_Grant_by_Brady_c1870-restored_%283x4_crop%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1869",
+        "end_date": "March 4, 1877",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Ulysses S. Grant",
+            "birth_date": "1822",
+            "death_date": "1885"
+        },
+        "vice_presidents": [
+            "Schuyler Colfax",
+            "Henry Wilson"
+        ],
+        "election_years": [
+            "1868",
+            "1872"
+        ]
+    },
+    {
+        "number": 19,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/President_Rutherford_Hayes_1870_-_1880_%283x4_cropped%29.jpg/110px-President_Rutherford_Hayes_1870_-_1880_%283x4_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1877",
+        "end_date": "March 4, 1881",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Rutherford B. Hayes",
+            "birth_date": "1822",
+            "death_date": "1893"
+        },
+        "vice_presidents": [
+            "William A. Wheeler"
+        ],
+        "election_years": [
+            "1876"
+        ]
+    },
+    {
+        "number": 20,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/3/37/James_Abram_Garfield%2C_photo_portrait_seated_%28cropped_4x5%29.jpg/110px-James_Abram_Garfield%2C_photo_portrait_seated_%28cropped_4x5%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1881",
+        "end_date": "September 19, 1881",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "James A. Garfield",
+            "birth_date": "1831",
+            "death_date": "1881"
+        },
+        "vice_presidents": [
+            "Chester A. Arthur"
+        ],
+        "election_years": [
+            "1880"
+        ]
+    },
+    {
+        "number": 21,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Chester_A._Arthur_by_Abraham_Bogardus_%28cropped%29_%282%29.jpg/110px-Chester_A._Arthur_by_Abraham_Bogardus_%28cropped%29_%282%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "September 19, 1881",
+        "end_date": "March 4, 1885",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Chester A. Arthur",
+            "birth_date": "1829",
+            "death_date": "1886"
+        },
+        "vice_presidents": [],
+        "election_years": []
+    },
+    {
+        "number": 22,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Grover_Cleveland_by_Charles_Milton_Bell_%28B%26W%29_%28cropped%29_%28a%29.jpg/110px-Grover_Cleveland_by_Charles_Milton_Bell_%28B%26W%29_%28cropped%29_%28a%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1885",
+        "end_date": "March 4, 1889",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Grover Cleveland",
+            "birth_date": "1837",
+            "death_date": "1908"
+        },
+        "vice_presidents": [
+            "Thomas A. Hendricks"
+        ],
+        "election_years": [
+            "1884"
+        ]
+    },
+    {
+        "number": 23,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Benjamin_Harrison%2C_head_and_shoulders_bw_photo%2C_1896_%284x5_cropped%29.jpg/110px-Benjamin_Harrison%2C_head_and_shoulders_bw_photo%2C_1896_%284x5_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1889",
+        "end_date": "March 4, 1893",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Benjamin Harrison",
+            "birth_date": "1833",
+            "death_date": "1901"
+        },
+        "vice_presidents": [
+            "Levi P. Morton"
+        ],
+        "election_years": [
+            "1888"
+        ]
+    },
+    {
+        "number": 24,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/3/36/StephenGroverCleveland.jpg/110px-StephenGroverCleveland.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1893",
+        "end_date": "March 4, 1897",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Grover Cleveland",
+            "birth_date": "1837",
+            "death_date": "1908"
+        },
+        "vice_presidents": [
+            "Adlai Stevenson\u00a0I"
+        ],
+        "election_years": [
+            "1892"
+        ]
+    },
+    {
+        "number": 25,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/3/30/McKinley_%28cropped%29.jpg/110px-McKinley_%28cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1897",
+        "end_date": "September 14, 1901",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "William McKinley",
+            "birth_date": "1843",
+            "death_date": "1901"
+        },
+        "vice_presidents": [
+            "Garret Hobart",
+            "Theodore Roosevelt"
+        ],
+        "election_years": [
+            "1896",
+            "1900"
+        ]
+    },
+    {
+        "number": 26,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29.jpg/110px-Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "September 14, 1901",
+        "end_date": "March 4, 1909",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Theodore Roosevelt",
+            "birth_date": "1858",
+            "death_date": "1919"
+        },
+        "vice_presidents": [
+            "Charles W. Fairbanks"
+        ],
+        "election_years": [
+            "1904"
+        ]
+    },
+    {
+        "number": 27,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/William_Howard_Taft_by_Pach_Brothers_%283x4_ropped%29.jpg/110px-William_Howard_Taft_by_Pach_Brothers_%283x4_ropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1909",
+        "end_date": "March 4, 1913",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "William Howard Taft",
+            "birth_date": "1857",
+            "death_date": "1930"
+        },
+        "vice_presidents": [
+            "James S. Sherman"
+        ],
+        "election_years": [
+            "1908"
+        ]
+    },
+    {
+        "number": 28,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/1/11/President_Woodrow_Wilson_by_Harris_%26_Ewing%2C_1914_%283x4_cropped%29.jpg/110px-President_Woodrow_Wilson_by_Harris_%26_Ewing%2C_1914_%283x4_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1913",
+        "end_date": "March 4, 1921",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Woodrow Wilson",
+            "birth_date": "1856",
+            "death_date": "1924"
+        },
+        "vice_presidents": [
+            "Thomas R. Marshall"
+        ],
+        "election_years": [
+            "1912",
+            "1916"
+        ]
+    },
+    {
+        "number": 29,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Warren_G_Harding-Harris_%26_Ewing_%283x4_cropped%29.jpg/110px-Warren_G_Harding-Harris_%26_Ewing_%283x4_cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1921",
+        "end_date": "August 2, 1923",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Warren G. Harding",
+            "birth_date": "1865",
+            "death_date": "1923"
+        },
+        "vice_presidents": [
+            "Calvin Coolidge"
+        ],
+        "election_years": [
+            "1920"
+        ]
+    },
+    {
+        "number": 30,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Calvin-Coolidge_portrait_1924_%28cropped%29.png/110px-Calvin-Coolidge_portrait_1924_%28cropped%29.png",
+            "local_uri": null
+        },
+        "start_date": "August 2, 1923",
+        "end_date": "March 4, 1929",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Calvin Coolidge",
+            "birth_date": "1872",
+            "death_date": "1933"
+        },
+        "vice_presidents": [
+            "Charles G. Dawes"
+        ],
+        "election_years": [
+            "1924"
+        ]
+    },
+    {
+        "number": 31,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Unsuccessful_1932.jpg/110px-Unsuccessful_1932.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1929",
+        "end_date": "March 4, 1933",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Herbert Hoover",
+            "birth_date": "1874",
+            "death_date": "1964"
+        },
+        "vice_presidents": [
+            "Charles Curtis"
+        ],
+        "election_years": [
+            "1928"
+        ]
+    },
+    {
+        "number": 32,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/FDR-1944-Campaign-Portrait_%28cropped%29.jpg/110px-FDR-1944-Campaign-Portrait_%28cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "March 4, 1933",
+        "end_date": "April 12, 1945",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Franklin D. Roosevelt",
+            "birth_date": "1882",
+            "death_date": "1945"
+        },
+        "vice_presidents": [
+            "John Nance Garner",
+            "Henry A. Wallace",
+            "Harry S. Truman"
+        ],
+        "election_years": [
+            "1932",
+            "1936",
+            "1940",
+            "1944"
+        ]
+    },
+    {
+        "number": 33,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg/110px-TRUMAN_58-766-06_%28cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "April 12, 1945",
+        "end_date": "January 20, 1953",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Harry S. Truman",
+            "birth_date": "1884",
+            "death_date": "1972"
+        },
+        "vice_presidents": [
+            "Alben W. Barkley"
+        ],
+        "election_years": [
+            "1948"
+        ]
+    },
+    {
+        "number": 34,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/0/02/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959_%28cropped%29%283%29.jpg/110px-Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959_%28cropped%29%283%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 1953",
+        "end_date": "January 20, 1961",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Dwight D. Eisenhower",
+            "birth_date": "1890",
+            "death_date": "1969"
+        },
+        "vice_presidents": [
+            "Richard Nixon"
+        ],
+        "election_years": [
+            "1952",
+            "1956"
+        ]
+    },
+    {
+        "number": 35,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/John_F._Kennedy%2C_White_House_color_photo_portrait_%283x4%29_%28cropped%29.jpg/110px-John_F._Kennedy%2C_White_House_color_photo_portrait_%283x4%29_%28cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 1961",
+        "end_date": "November 22, 1963",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "John F. Kennedy",
+            "birth_date": "1917",
+            "death_date": "1963"
+        },
+        "vice_presidents": [
+            "Lyndon B. Johnson"
+        ],
+        "election_years": [
+            "1960"
+        ]
+    },
+    {
+        "number": 36,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c3/37_Lyndon_Johnson_3x4.jpg/110px-37_Lyndon_Johnson_3x4.jpg",
+            "local_uri": null
+        },
+        "start_date": "November 22, 1963",
+        "end_date": "January 20, 1969",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Lyndon B. Johnson",
+            "birth_date": "1908",
+            "death_date": "1973"
+        },
+        "vice_presidents": [
+            "Hubert Humphrey"
+        ],
+        "election_years": [
+            "1964"
+        ]
+    },
+    {
+        "number": 37,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Richard_Nixon_presidential_portrait_%281%29.jpg/110px-Richard_Nixon_presidential_portrait_%281%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 1969",
+        "end_date": "August 9, 1974",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Richard Nixon",
+            "birth_date": "1913",
+            "death_date": "1994"
+        },
+        "vice_presidents": [
+            "Spiro Agnew",
+            "[h]",
+            "Gerald Ford",
+            "[t]"
+        ],
+        "election_years": [
+            "1968",
+            "1972"
+        ]
+    },
+    {
+        "number": 38,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Gerald_Ford_presidential_portrait_%28cropped_3%29.jpg/110px-Gerald_Ford_presidential_portrait_%28cropped_3%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "August 9, 1974",
+        "end_date": "January 20, 1977",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Gerald Ford",
+            "birth_date": "1913",
+            "death_date": "2006"
+        },
+        "vice_presidents": [
+            "Nelson Rockefeller",
+            "[t]"
+        ],
+        "election_years": []
+    },
+    {
+        "number": 39,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/6/68/Carter_cropped.jpg/110px-Carter_cropped.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 1977",
+        "end_date": "January 20, 1981",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Jimmy Carter",
+            "birth_date": "1924",
+            "death_date": "2024"
+        },
+        "vice_presidents": [
+            "Walter Mondale"
+        ],
+        "election_years": [
+            "1976"
+        ]
+    },
+    {
+        "number": 40,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Official_Portrait_of_President_Reagan_1981-cropped.jpg/110px-Official_Portrait_of_President_Reagan_1981-cropped.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 1981",
+        "end_date": "January 20, 1989",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Ronald Reagan",
+            "birth_date": "1911",
+            "death_date": "2004"
+        },
+        "vice_presidents": [
+            "George H. W. Bush"
+        ],
+        "election_years": [
+            "1980",
+            "1984"
+        ]
+    },
+    {
+        "number": 41,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7e/George_H._W._Bush_presidential_portrait_%28cropped_2%29.jpg/110px-George_H._W._Bush_presidential_portrait_%28cropped_2%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 1989",
+        "end_date": "January 20, 1993",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "George H. W. Bush",
+            "birth_date": "1924",
+            "death_date": "2018"
+        },
+        "vice_presidents": [
+            "Dan Quayle"
+        ],
+        "election_years": [
+            "1988"
+        ]
+    },
+    {
+        "number": 42,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/110px-Bill_Clinton.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 1993",
+        "end_date": "January 20, 2001",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Bill Clinton",
+            "birth_date": "1946",
+            "death_date": null
+        },
+        "vice_presidents": [
+            "Al Gore"
+        ],
+        "election_years": [
+            "1992",
+            "1996"
+        ]
+    },
+    {
+        "number": 43,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/George-W-Bush.jpeg/110px-George-W-Bush.jpeg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 2001",
+        "end_date": "January 20, 2009",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "George W. Bush",
+            "birth_date": "1946",
+            "death_date": null
+        },
+        "vice_presidents": [
+            "Dick Cheney"
+        ],
+        "election_years": [
+            "2000",
+            "2004"
+        ]
+    },
+    {
+        "number": 44,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/5/55/President_Barack_Obama%2C_2012_portrait_crop.jpg/110px-President_Barack_Obama%2C_2012_portrait_crop.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 2009",
+        "end_date": "January 20, 2017",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Barack Obama",
+            "birth_date": "1961",
+            "death_date": null
+        },
+        "vice_presidents": [
+            "Joe Biden"
+        ],
+        "election_years": [
+            "2008",
+            "2012"
+        ]
+    },
+    {
+        "number": 45,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Donald_Trump_official_portrait_%283x4a%29.jpg/110px-Donald_Trump_official_portrait_%283x4a%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 2017",
+        "end_date": "January 20, 2021",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Donald Trump",
+            "birth_date": "1946",
+            "death_date": null
+        },
+        "vice_presidents": [
+            "Mike Pence"
+        ],
+        "election_years": [
+            "2016"
+        ]
+    },
+    {
+        "number": 46,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Joe_Biden_presidential_portrait_%28cropped%29.jpg/110px-Joe_Biden_presidential_portrait_%28cropped%29.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 2021",
+        "end_date": "January 20, 2025",
+        "political_affiliations": [
+            "Democratic"
+        ],
+        "president": {
+            "name": "Joe Biden",
+            "birth_date": "1942",
+            "death_date": null
+        },
+        "vice_presidents": [
+            "Kamala Harris"
+        ],
+        "election_years": [
+            "2020"
+        ]
+    },
+    {
+        "number": 47,
+        "portait": {
+            "online_uri": "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/TrumpPortrait.jpg/110px-TrumpPortrait.jpg",
+            "local_uri": null
+        },
+        "start_date": "January 20, 2025",
+        "end_date": "",
+        "political_affiliations": [
+            "Republican"
+        ],
+        "president": {
+            "name": "Donald Trump",
+            "birth_date": "1946",
+            "death_date": null
+        },
+        "vice_presidents": [
+            "JD Vance"
+        ],
+        "election_years": [
+            "2024"
+        ]
+    }
+]

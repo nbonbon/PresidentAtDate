@@ -103,7 +103,7 @@ class Scraper:
                 
                 terms.append(current_term)
                 
-                current_row = current_row.find_next('tr')
+                current_row = current_row.find_next_sibling('tr')
                 current_cell = None
 
             return terms
@@ -155,6 +155,9 @@ class Scraper:
             print("No <span> tag found in the current cell.")
 
     def parse_term_dates(self, cell):
+        start_date = ""
+        end_date = ""
+
         start_span = cell.find('span')
         end_span = start_span.find_next_sibling('span')
 
@@ -165,8 +168,6 @@ class Scraper:
 
         if end_span:
             end_date = end_span.get_text().strip()
-        else:
-            print("No term end <span> tag found in the current cell.")
 
         return start_date, end_date
     
