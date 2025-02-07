@@ -90,6 +90,9 @@ class Scraper:
             current_term.party = self.parse_political_affiliations(current_cell)
             current_cell = current_cell.find_next_sibling()
 
+            current_term.election_years = self.parse_election_years(current_cell)
+            current_cell = current_cell.find_next_sibling()
+
             current_term.portrait = current_portrait
             current_term.president = current_president
             
@@ -102,6 +105,10 @@ class Scraper:
 
     def remove_reference(self, str):
         return re.sub(r'\[.*\]', '', str)
+    
+    def is_reference(self, text):
+        match = re.search(r"\[([a-f]{1,2}|\d{1,3})\]", text)
+        return match
     
     def parse_number(self, cell):
         return self.remove_reference(cell.get_text().strip())
@@ -164,6 +171,11 @@ class Scraper:
                 terms.append(node_text)
         return terms
 
-    def is_reference(self, text):
-        match = re.search(r"\[([a-f]{1,2}|\d{1,3})\]", text)
-        return match
+    def parse_election_years(self, cell):
+        years = []
+        nodes = cell.find_all('a')
+        for node in nodes:
+            node_text = node.get_text().strip()
+            if not self.is_reference(node_text):
+                years.append(node_text)
+        return years

@@ -103,6 +103,25 @@ class ScraperTest(unittest.TestCase):
         self.assertEqual(result[0], "Democratic-Republican")
         self.assertEqual(result[1], "National Republican")
 
+    def test_parse_election_years_shouldParseSingleElectionYear(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td><a href="/wiki/1796_United_States_presidential_election" title="1796 United States presidential election">1796</a></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result = scraper.parse_election_years(soup)
+
+        self.assertEqual(result[0], "1796".replace('-', '–'))
+        self.assertEqual(len(result), 1)
+
+    def test_parse_election_years_shouldParseMultipleElectionYears(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td class="nowrap"><a href="/wiki/1788%E2%80%9389_United_States_presidential_election" title="1788–89 United States presidential election">1788–89</a><hr><a href="/wiki/1792_United_States_presidential_election" title="1792 United States presidential election">1792</a></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result = scraper.parse_election_years(soup)
+
+        self.assertEqual(result[0], "1788-89".replace('-', '–'))
+        self.assertEqual(result[1], "1792".replace('-', '–'))
 
 if __name__ == '__main__':
     unittest.main()
