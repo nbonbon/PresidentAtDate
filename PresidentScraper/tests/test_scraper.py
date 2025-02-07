@@ -65,5 +65,44 @@ class ScraperTest(unittest.TestCase):
         self.assertEqual(result1, "April 30, 1789")
         self.assertEqual(result2, "March 4, 1797")
 
+    def test_parse_party_shouldParseParty_i(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td><i>Unaffiliated</i></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result = scraper.parse_political_affiliations(soup)
+
+        self.assertEqual(result[0], "Unaffiliated")
+
+    def test_parse_party_shouldParseParty_a(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td><a href="/wiki/Republican_Party_(United_States)" title="Republican Party (United States)">Republican</a></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result = scraper.parse_political_affiliations(soup)
+
+        self.assertEqual(result[0], "Republican")
+
+    def test_parse_party_shouldParseParty_linebreak(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td><a href="/wiki/Democratic-Republican_Party" title="Democratic-Republican Party">Democratic-<br>Republican</a></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result = scraper.parse_political_affiliations(soup)
+
+        self.assertEqual(result[0], "Democratic-Republican")
+
+    # Test data from John Quincy Adams
+    def test_parse_party_shouldParseParty_linebreak_and_two_parties(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td><a href="/wiki/Democratic-Republican_Party" title="Democratic-Republican Party">Democratic-<br>Republican</a><sup id="cite_ref-JQAdams_34-0" class="reference"><a href="#cite_note-JQAdams-34"><span class="cite-bracket">&#91;</span>f<span class="cite-bracket">&#93;</span></a></sup><hr><a href="/wiki/National_Republican_Party" title="National Republican Party">National Republican</a></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result = scraper.parse_political_affiliations(soup)
+
+        self.assertEqual(result[0], "Democratic-Republican")
+        self.assertEqual(result[1], "National Republican")
+
+
 if __name__ == '__main__':
     unittest.main()

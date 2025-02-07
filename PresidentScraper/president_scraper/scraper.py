@@ -84,6 +84,12 @@ class Scraper:
             current_term.end_date = end_date
             current_cell = current_cell.find_next_sibling()
 
+            # skip party color
+            current_cell = current_cell.find_next_sibling()
+
+            current_term.party = self.parse_political_affiliations(current_cell)
+            current_cell = current_cell.find_next_sibling()
+
             current_term.portrait = current_portrait
             current_term.president = current_president
             
@@ -148,3 +154,16 @@ class Scraper:
             print("No term end <span> tag found in the current cell.")
 
         return start_date, end_date
+    
+    def parse_political_affiliations(self, cell):
+        terms = []
+        nodes = cell.find_all(['a', 'i'])
+        for node in nodes:
+            node_text = node.get_text().strip()
+            if not self.is_reference(node_text):
+                terms.append(node_text)
+        return terms
+
+    def is_reference(self, text):
+        match = re.search(r"\[([a-f]{1,2}|\d{1,3})\]", text)
+        return match
