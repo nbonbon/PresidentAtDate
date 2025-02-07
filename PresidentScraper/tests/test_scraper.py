@@ -18,22 +18,23 @@ class ScraperTest(unittest.TestCase):
     def test_scrapeShouldParseTheCorrectNumberOfPresidents(self):
         scraper = Scraper(self.mockRequester)
         result = scraper.scrape()
+        
         self.assertEqual(len(result), 1)
 
-    def test_scrapeShouldParseTheTermNumber(self):
-        scraper = Scraper(self.mockRequester)
-        result = scraper.scrape()
         self.assertEqual(result[0].number, 1)
-
-    def test_scrapeShouldParseThePortraitUri(self):
-        scraper = Scraper(self.mockRequester)
-        result = scraper.scrape()
         self.assertEqual(result[0].portrait.online_uri, "//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington_%28cropped%29%282%29.jpg/110px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington_%28cropped%29%282%29.jpg")
-
-    def test_scrapeShouldParseTheTermPresidentName(self):
-        scraper = Scraper(self.mockRequester)
-        result = scraper.scrape()
         self.assertEqual(result[0].president.name, "George Washington")
+        self.assertEqual(result[0].president.birth_date, "1732")
+        self.assertEqual(result[0].president.death_date, "1799")
+        self.assertEqual(result[0].start_date, "April 30, 1789")
+        self.assertEqual(result[0].end_date, "March 4, 1797")
+        self.assertEqual(len(result[0].political_affiliations), 1)
+        self.assertEqual(result[0].political_affiliations[0], "Unaffiliated")
+        self.assertEqual(len(result[0].election_years), 2)
+        self.assertEqual(result[0].election_years[0], "1788–89")
+        self.assertEqual(result[0].election_years[1], "1792")
+        self.assertEqual(len(result[0].vice_presidents), 1)
+        self.assertEqual(result[0].vice_presidents[0], "John Adams")
 
     def test_parse_dates_shouldParseBirthAndDeathDates(self):
         scraper = Scraper(self.mockRequester)
@@ -72,6 +73,7 @@ class ScraperTest(unittest.TestCase):
 
         result = scraper.parse_political_affiliations(soup)
 
+        self.assertEqual(len(result), 1)
         self.assertEqual(result[0], "Unaffiliated")
 
     def test_parse_party_shouldParseParty_a(self):
@@ -81,6 +83,7 @@ class ScraperTest(unittest.TestCase):
 
         result = scraper.parse_political_affiliations(soup)
 
+        self.assertEqual(len(result), 1)
         self.assertEqual(result[0], "Republican")
 
     def test_parse_party_shouldParseParty_linebreak(self):
@@ -89,7 +92,8 @@ class ScraperTest(unittest.TestCase):
         soup = BeautifulSoup(content, "html.parser")
 
         result = scraper.parse_political_affiliations(soup)
-
+        
+        self.assertEqual(len(result), 1)
         self.assertEqual(result[0], "Democratic-Republican")
 
     # Test data from John Quincy Adams
@@ -100,6 +104,7 @@ class ScraperTest(unittest.TestCase):
 
         result = scraper.parse_political_affiliations(soup)
 
+        self.assertEqual(len(result), 2)
         self.assertEqual(result[0], "Democratic-Republican")
         self.assertEqual(result[1], "National Republican")
 
@@ -110,8 +115,8 @@ class ScraperTest(unittest.TestCase):
 
         result = scraper.parse_election_years(soup)
 
-        self.assertEqual(result[0], "1796".replace('-', '–'))
         self.assertEqual(len(result), 1)
+        self.assertEqual(result[0], "1796")
 
     def test_parse_election_years_shouldParseMultipleElectionYears(self):
         scraper = Scraper(self.mockRequester)
@@ -120,8 +125,41 @@ class ScraperTest(unittest.TestCase):
 
         result = scraper.parse_election_years(soup)
 
-        self.assertEqual(result[0], "1788-89".replace('-', '–'))
-        self.assertEqual(result[1], "1792".replace('-', '–'))
+        self.assertEqual(len(result), 2)
+        self.assertEqual(result[0], "1788–89")
+        self.assertEqual(result[1], "1792")
+
+    def test_parse_vice_presidents_shouldParseSingleVicePresident(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td><a href="/wiki/John_Adams" title="John Adams">John Adams</a><sup id="cite_ref-23" class="reference"><a href="#cite_note-23"><span class="cite-bracket">&#91;</span>c<span class="cite-bracket">&#93;</span></a></sup></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result = scraper.parse_vice_presidents(soup)
+
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0], "John Adams")
+
+    def test_parse_vice_presidents_shouldParseDoubleVicePresident(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td><a href="/wiki/Aaron_Burr" title="Aaron Burr">Aaron Burr</a><hr><a href="/wiki/George_Clinton_(vice_president)" title="George Clinton (vice president)">George Clinton</a></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result = scraper.parse_vice_presidents(soup)
+
+        self.assertEqual(len(result), 2)
+        self.assertEqual(result[0], "Aaron Burr")
+        self.assertEqual(result[1], "George Clinton")
+
+    def test_parse_vice_presidents_shouldParseJamesMadisonVps(self):
+        scraper = Scraper(self.mockRequester)
+        content = """<td><a href="/wiki/George_Clinton_(vice_president)" title="George Clinton (vice president)">George Clinton</a><sup id="cite_ref-diedintraterm_30-0" class="reference"><a href="#cite_note-diedintraterm-30"><span class="cite-bracket">&#91;</span>e<span class="cite-bracket">&#93;</span></a></sup><hr><i>Vacant&#160;after<br>April 20, 1812</i><hr><a href="/wiki/Elbridge_Gerry" title="Elbridge Gerry">Elbridge Gerry</a><sup id="cite_ref-diedintraterm_30-1" class="reference"><a href="#cite_note-diedintraterm-30"><span class="cite-bracket">&#91;</span>e<span class="cite-bracket">&#93;</span></a></sup><hr><i>Vacant&#160;after<br>November 23, 1814</i></td>"""
+        soup = BeautifulSoup(content, "html.parser")
+
+        result = scraper.parse_vice_presidents(soup)
+
+        self.assertEqual(len(result), 2)
+        self.assertEqual(result[0], "George Clinton")
+        self.assertEqual(result[1], "Elbridge Gerry")
 
 if __name__ == '__main__':
     unittest.main()

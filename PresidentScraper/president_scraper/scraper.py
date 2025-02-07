@@ -87,11 +87,14 @@ class Scraper:
             # skip party color
             current_cell = current_cell.find_next_sibling()
 
-            current_term.party = self.parse_political_affiliations(current_cell)
+            current_term.political_affiliations = self.parse_political_affiliations(current_cell)
             current_cell = current_cell.find_next_sibling()
 
             current_term.election_years = self.parse_election_years(current_cell)
             current_cell = current_cell.find_next_sibling()
+
+            current_term.vice_presidents = self.parse_vice_presidents(current_cell)
+            current_cell = current_cell.find_next_sibling() # should return None
 
             current_term.portrait = current_portrait
             current_term.president = current_president
@@ -179,3 +182,12 @@ class Scraper:
             if not self.is_reference(node_text):
                 years.append(node_text)
         return years
+    
+    def parse_vice_presidents(self, cell):
+        vps = []
+        nodes = cell.find_all('a')
+        for node in nodes:
+            node_text = node.get_text().strip()
+            if not self.is_reference(node_text):
+                vps.append(node_text)
+        return vps
