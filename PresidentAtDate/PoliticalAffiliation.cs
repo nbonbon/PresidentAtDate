@@ -15,6 +15,8 @@ namespace PresidentAtDate
         [Description("Republican")]
         Republican,
         [Description("Whig")]
-        Whig
+        Whig,
+        [Description("Unaffiliated")]
+        Unaffiliated,
     }
 }

@@ -11,7 +11,7 @@ namespace PresidentAtDate.Common.InputContainers
         private const string PATH = @"Data\Presidents.xlsx";
         private const string CONNECTION_STRING = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + PATH + ";Extended Properties=\"Excel 12.0 Xml;HDR=YES\"";
 
-        public List<Term> loadTerms()
+        public List<Term> LoadTerms()
         {
             List<Term> termList = new List<Term>();
 
@@ -46,7 +46,7 @@ namespace PresidentAtDate.Common.InputContainers
                                 case PresidentDataColumn.Name:
                                     if (!string.IsNullOrEmpty(currentValue))
                                     {
-                                        presidentBeingParsed.name = currentValue;
+                                        presidentBeingParsed.Name = currentValue;
                                     }
                                     else
                                     {
@@ -66,7 +66,7 @@ namespace PresidentAtDate.Common.InputContainers
                                 case PresidentDataColumn.Born:
                                     if (!string.IsNullOrEmpty(currentValue))
                                     {
-                                        presidentBeingParsed.birthDate = Convert.ToDateTime(currentValue);
+                                        presidentBeingParsed.BirthDate = Convert.ToDateTime(currentValue);
                                     }
                                     else
                                     {
@@ -76,22 +76,22 @@ namespace PresidentAtDate.Common.InputContainers
                                 case PresidentDataColumn.Died:
                                     if (!string.IsNullOrEmpty(currentValue))
                                     {
-                                        presidentBeingParsed.deathDate = Convert.ToDateTime(currentValue);
+                                        presidentBeingParsed.DeathDate = Convert.ToDateTime(currentValue);
                                     }
                                     else
                                     {
                                         // President death date can be null if they are still alive
-                                        presidentBeingParsed.deathDate = null;
+                                        presidentBeingParsed.DeathDate = null;
                                     }
                                     break;
                                 case PresidentDataColumn.Party:
                                     if (!string.IsNullOrEmpty(currentValue))
                                     {
-                                        presidentBeingParsed.politicalAffiliation = (PoliticalAffiliation)EnumUtil.GetEnumFromDescription(typeof(PoliticalAffiliation), currentValue);
+                                        presidentBeingParsed.PoliticalAffiliation = (PoliticalAffiliation)EnumUtil.GetEnumFromDescription(typeof(PoliticalAffiliation), currentValue);
                                     }
                                     else
                                     {
-                                        presidentBeingParsed.politicalAffiliation = PoliticalAffiliation.None;
+                                        presidentBeingParsed.PoliticalAffiliation = PoliticalAffiliation.None;
                                     }
                                     break;
                             }
@@ -99,7 +99,7 @@ namespace PresidentAtDate.Common.InputContainers
 
                         foreach (Term t in currentPresidentTermList)
                         {
-                            t.termPresident = presidentBeingParsed;
+                            t.TermPresident = presidentBeingParsed;
                         }
 
                         termList.AddRange(currentPresidentTermList);

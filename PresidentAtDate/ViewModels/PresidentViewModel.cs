@@ -79,9 +79,9 @@ namespace PresidentAtDate.ViewModels
             President result = null;
             foreach (Term t in termList)
             {
-                if (t.endDateInOffice == null)
+                if (t.EndDateInOffice == null)
                 {
-                    result = t.termPresident;
+                    result = t.TermPresident;
                 }
             }
             return result;
@@ -113,7 +113,7 @@ namespace PresidentAtDate.ViewModels
                 {
                     if (selectedDate.HasValue && t.isInRange(selectedDate.Value))
                     {
-                        UpdateDisplayedPresident(t.termPresident); ;
+                        UpdateDisplayedPresident(t.TermPresident); ;
                     }
                 }
             }
@@ -128,10 +128,10 @@ namespace PresidentAtDate.ViewModels
             // If the date selected was this presidents inaugral day mention that
 
             // Update text
-            PresidentDescription = "Name: " + p.name + Environment.NewLine;
-            PresidentDescription += "Born: " + p.birthDate.ToShortDateString() + Environment.NewLine;
-            PresidentDescription += "Died: " + (p.deathDate == null ? "Still living" : p.deathDate.Value.ToShortDateString()) + Environment.NewLine;
-            PresidentDescription += "Party: " + EnumUtil.GetEnumDescription(p.politicalAffiliation) + Environment.NewLine;
+            PresidentDescription = "Name: " + p.Name + Environment.NewLine;
+            PresidentDescription += "Born: " + p.BirthDate.ToShortDateString() + Environment.NewLine;
+            PresidentDescription += "Died: " + (p.DeathDate == null ? "Still living" : p.DeathDate.Value.ToShortDateString()) + Environment.NewLine;
+            PresidentDescription += "Party: " + EnumUtil.GetEnumDescription(p.PoliticalAffiliation) + Environment.NewLine;
             PresidentDescription += "Presidential Number: " + DisplayPresidentalNumbers(p) + Environment.NewLine;
 
             // Update image
@@ -146,7 +146,7 @@ namespace PresidentAtDate.ViewModels
         private string DisplayPresidentalNumbers(President p)
         {
             string result = "";
-            foreach (int num in p.presidentNumbers)
+            foreach (int num in p.PresidentNumbers)
             {
                 if (result == "")
                 {
@@ -213,7 +213,7 @@ namespace PresidentAtDate.ViewModels
         private void PopulateTermList()
         {
             ExcelOleDbTermpInputContainer inputContainer = new ExcelOleDbTermpInputContainer();
-            termList = inputContainer.loadTerms();
+            termList = inputContainer.LoadTerms();
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace PresidentAtDate.ViewModels
 
             for (int i = 0; i < termList.Count; i++)
             {
-                termList[i].termPresident.presidentNumbers.Add(i + 1);
+                termList[i].TermPresident.PresidentNumbers.Add(i + 1);
             }
         }
 

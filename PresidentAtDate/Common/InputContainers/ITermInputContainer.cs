@@ -4,6 +4,6 @@ namespace PresidentAtDate
 {
     interface ITermInputContainer
     {
-        List<Term> loadTerms();
+        List<Term> LoadTerms();
     }
 }

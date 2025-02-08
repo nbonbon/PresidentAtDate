@@ -5,23 +5,23 @@ namespace PresidentAtDate
 {
     public class President
     {
-        public string name { get; set; }
-        public DateTime birthDate { get; set; }
-        public DateTime? deathDate { get; set; }
-        public PoliticalAffiliation politicalAffiliation { get; set; }
-        public List<int> presidentNumbers { get; set; }
+        public string Name { get; set; }
+        public DateTime BirthDate { get; set; }
+        public DateTime? DeathDate { get; set; }
+        public PoliticalAffiliation PoliticalAffiliation { get; set; }
+        public List<int> PresidentNumbers { get; set; }
         public string imageUri
         {
             get
             {
                 // picture is numbered for first term
-                return "p" + presidentNumbers[0];
+                return "p" + PresidentNumbers[0];
             }
         }
 
         public President()
         {
-            presidentNumbers = new List<int>();
+            PresidentNumbers = new List<int>();
         }
     }
 }

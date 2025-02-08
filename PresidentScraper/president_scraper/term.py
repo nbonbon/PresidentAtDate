@@ -19,7 +19,7 @@ class Term:
     def to_dict(self):
         return {
             "number": self.number,
-            "portait": self.portrait.to_dict(),
+            "portrait": self.portrait.to_dict(),
             "start_date" : self.start_date,
             "end_date" : self.end_date,
             "political_affiliations" : self.political_affiliations,
